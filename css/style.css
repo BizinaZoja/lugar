@@ -30,41 +30,38 @@ a {
 /* Menu */
 header {
     width: 100%;
-    background-color: #afd4e2a4;
     position: sticky;
     top: 0;
     z-index: 10;
 }
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    top:0;
+    background-color: #afd4e2a4;
+}
+
 .nav a {
     color: #1E3240;
 }
 
 .nav {
-    max-width: 1240;
-    margin: 16px auto;
-    padding: 20px 16px;
+    max-width: 1440px;
+    margin: 1em auto;
+    padding: 1em 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1240px) {
+@media screen and (min-width: 768px) and (max-width: 1240px) {
     .nav {
-        max-width: 920px;
+        max-width: 100%;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .nav {
-        max-width: 760px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .nav {
-        max-width: 760px;
-    }
-}
+/* todo burger menu and media for tablets and phones for header */
 
 .logo {
     font-weight: 700;
@@ -72,7 +69,6 @@ header {
     line-height: 23px;
     text-transform: uppercase;
     line-height: 120%;
-
 }
 
 .nav__menu {
@@ -82,7 +78,6 @@ header {
 }
 
 .nav__menu-item {
-    /* margin-right: 70px; */
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -99,8 +94,8 @@ section {
 
 .hero {
     background-color: #AFD4E2;
-    position: absolute;
-    top:0;
+    /* position: absolute;
+    top:0; */
 }
 
 .container {
