@@ -24,6 +24,13 @@ main {
 a {
     text-decoration: none;
     line-height: 120%;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+a:hover {  
+    font-weight: 700;
+    text-shadow: -1px 1px 4px #1E3240;   
 }
 
 
@@ -45,6 +52,7 @@ header {
 .nav a {
     color: #1E3240;
 }
+
 
 .nav {
     max-width: 1440px;
