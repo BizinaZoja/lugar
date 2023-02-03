@@ -123,29 +123,23 @@ section {
 }
 
 .hero__content {
-    /* position: relative; */
     overflow: visible;
-    max-width: 60%;
+    max-width: 55%;
     vertical-align: middle;
 }
 
-.flex-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.hero__content-text {
-    position: relative;
-    background-color: #afd4e260;
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    grid-auto-flow: row;
 }
 
 .hero_title {
     font-weight: 700;
     font-size: 7vw;
     line-height: 120%;
-    
+    grid-column: 1 / span 4;
 }
 
 @media screen and (min-width: 1140px) {
@@ -161,59 +155,61 @@ p.dark {
     margin-top: 18px;
     color: #1E3240;
     background-color: #afd4e260;
-}
 
-.hero .btns {
-    margin-top: 32px;
-}
-
-.btn:hover {
-    cursor: pointer;
-}
-
-@media screen and (max-width: 1140px) {
-    .hero__content-text {
-        max-width: 50%;
-    }
+    grid-column: 1/ span 3;
 }
 
 .hero img {
     display: block;
-    z-index: 0;
-}
-
-/* @media screen and (max-width: 1600px) {
-    .hero img {
-        z-index: 0;
-    }
-} */
-
-.hero__content-text img {
-    position: absolute;
-    bottom: 0px;
-    right: 0;
+    margin-top: -10px;
+    grid-column: 4 / 5;
+    grid-row: 2 / span 2;
+    align-self: start;
 }
 
 .btn {
+    max-height: 53px;
     padding: 18px 24px;
     border: solid 1px #1E3240;
     font-weight: 300;
     font-size: 14px;
     line-height: 120%;
-}
 
-.hero .btn:last-child {
-    margin-left: 30px;
+    margin-top: 32px;
+    grid-row: 3 / 4;
+
+    transition: all 0.3s ease;
 }
 
 .light-btn {
+    margin-left: 15px;
     background-color: transparent;
+    grid-column: 2 / 3;
+
+    transition: all 0.3s ease;
+}
+
+.light-btn:hover {
+    text-shadow: -1px 1px 5px #1E3240;
 }
 
 .dark-btn {
+    margin-right: 15px;
     color: #fff;
-    /* opacity: .9; */
     background-color: #1E3240;
+    grid-column: 1 / 2;
+
+    transition: all 0.3s ease;
+}
+
+.dark-btn:hover {
+    text-shadow: -1px 1px 5px #fff;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: -1px 1px 5px #1E3240;
+
 }
 
 /* About */
