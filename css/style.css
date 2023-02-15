@@ -412,16 +412,20 @@ p.dark {
 
 .slider__item {
     width: 30%;
-    position: relative;
+    /* position: relative; */
+}
+.slider__item-img {
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .slider__item-descr {
-    position: absolute;
+    /* position: absolute;
 
     left: 10%;
     bottom: -10%;
     width: 80%;
-    padding: 7%;
+    padding: 7%; */
     background-color: #fff;
 }
 
